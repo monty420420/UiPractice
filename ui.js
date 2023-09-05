@@ -1,3 +1,4 @@
+//러디언
 function collapse(element) {
     let before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
     if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
@@ -15,6 +16,7 @@ function collapse(element) {
     }
 }
 
+//modal
 function modalOpen(){
     const modal = document.querySelector(".modal");
     const modalBtn = document.querySelector(".modal-btn");
@@ -30,6 +32,28 @@ function modalOpen(){
     //   변수.addEventListener('click', function(event) {
     //     event.stopPropagation();
     //   });
+}
+
+//캐러셀
+const container = document.querySelector(".container");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next"); 
+
+(function addEvent(){
+  prevBtn.addEventListener('click', translateContainer.bind(this, 1));
+  nextBtn.addEventListener('click', translateContainer.bind(this, -1));
+})();
+
+function translateContainer(direction){
+  const selectBtn = (direction === 1) ? 'prev' : 'next';
+  container.style.transitionDuration = '500ms';
+  container.style.transform = `translateX(${direction * (100 / 5)}%)`;
+  container.ontransitionend = () => reorganizeEl(selectBtn);
+}
+
+function reorganizeEl(selectBtn) {
+  container.removeAttribute('style');
+  (selectBtn === 'prev') ? container.insertBefore(container.lastElementChild, container.firstElementChild): container.appendChild(container.firstElementChild);
 }
 
 
