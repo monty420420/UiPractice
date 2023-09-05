@@ -1,0 +1,61 @@
+.collapsible {
+    background-color: navy;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active,
+.collapsible:hover {
+    background-color:  lightblue;
+}
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2212";
+}
+
+p{
+    cursor: pointer;
+}
+
+.modal{
+    width: 800px;
+    height: 400px;
+    background-color: aqua;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    z-index: 2;
+    display: none;
+    .close{
+        margin: 10px;
+        width: 30px;
+        height: 30px;
+        float: right;
+        background-color: yellow;
+        border: solid 3px orange;
+    }
+    .modal-contents{
+        background-color: white;
+        width: 600px;
+        height: 300px;
+        margin: 50px auto;
+    }
+}

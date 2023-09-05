@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "ui practice",
+  "main": "ui.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "uipracice"
+  },
+  "keywords": [
+    "123"
+  ],
+  "author": "123",
+  "license": "ISC"
+}
