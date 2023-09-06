@@ -58,20 +58,24 @@ function reorganizeEl(selectBtn) {
 
 function forPractice(){
   const forP = document.querySelector('.for');
-  let forArr = [2 ,3, 4]
+  let forArr = ["2" ,"3", "4"]
   for(i=0; i<1; i++){
-    forArr.push(5); // 배열에 5추가
-    console.log(forArr);
+    forArr.push("5"); // 배열에 5추가
+    // console.log(forArr);
   }
   forP.innerHTML = forArr;
 }
 forPractice();
 
 
-// function forEach(){
-//   const forEachP =document.querySelector('.forEach');
-//   let 
-// }
+function forEach(){
+  const forEachP = document.querySelector('.forEach');
+  let EachArr = 1
+  EachArr++
+  // console.log(EachArr);
+  forEachP.innerHTML = EachArr;
+}
+forEach();
 
 
 
