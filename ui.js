@@ -56,17 +56,22 @@ function reorganizeEl(selectBtn) {
   (selectBtn === 'prev') ? container.insertBefore(container.lastElementChild, container.firstElementChild): container.appendChild(container.firstElementChild);
 }
 
-function mapPractice(){
-  const map = document.querySelector('.map');
-  let tri = [2 ,3, 4]
+function forPractice(){
+  const forP = document.querySelector('.for');
+  let forArr = [2 ,3, 4]
   for(i=0; i<1; i++){
-    tri.push(5); // 배열에 5추가
-    console.log(tri);
+    forArr.push(5); // 배열에 5추가
+    console.log(forArr);
   }
-  map.innerHTML = tri ;
-  
+  forP.innerHTML = forArr;
 }
-mapPractice();
+forPractice();
+
+
+// function forEach(){
+//   const forEachP =document.querySelector('.forEach');
+//   let 
+// }
 
 
 
