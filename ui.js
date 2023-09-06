@@ -56,5 +56,17 @@ function reorganizeEl(selectBtn) {
   (selectBtn === 'prev') ? container.insertBefore(container.lastElementChild, container.firstElementChild): container.appendChild(container.firstElementChild);
 }
 
+function mapPractice(){
+  const map = document.querySelector('.map');
+  let tri = [2 ,3, 4]
+  for(i=0; i<1; i++){
+    tri.push(5); // 배열에 5추가
+    console.log(tri);
+  }
+  map.innerHTML = tri ;
+  
+}
+mapPractice();
+
 
 
