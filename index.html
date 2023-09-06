@@ -8,19 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-    <button type="button" class="collapsible" onclick="collapse(this);">페이지1</button>
-    <div class="content">
-        <p>페이지1 이동</p>
+    <div class="menu">
+        <button type="button" class="collapsible" onclick="collapse(this);">페이지1</button>
+        <div class="content">
+            <p>페이지1 이동</p>
+        </div>
+        <button type="button" class="collapsible" onclick="collapse(this);">페이지2</button>
+        <div class="content">
+            <p>페이지2 이동</p>
+        </div>
+        <button type="button" class="collapsible" onclick="collapse(this);">페이지3</button>
+        <div class="content">
+            <p>페이지3 이동</p>
+        </div>
+        <button class="modal-btn" onclick="modalOpen()">모달창</button>
     </div>
-    <button type="button" class="collapsible" onclick="collapse(this);">페이지2</button>
-    <div class="content">
-        <p>페이지2 이동</p>
-    </div>
-    <button type="button" class="collapsible" onclick="collapse(this);">페이지3</button>
-    <div class="content">
-        <p>페이지3 이동</p>
-    </div>
-    <button class="modal-btn" onclick="modalOpen()">모달창</button>
     <div class="modal">
         <button class="close">x</button>
         <div class="modal-contents">
@@ -41,6 +43,9 @@
             <button id="carousel-btn" class="prev">previous</button>
             <button id="carousel-btn" class="next">next</button>
           </div>
+    </div>
+    <div class="video">
+        <iframe src="./mp4/190301_1_25_11.mp4" frameborder="0"></iframe>
     </div>
 </body>
 </html>
