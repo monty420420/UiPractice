@@ -21,14 +21,14 @@ function modalOpen(){
     const modal = document.querySelector(".modal");
     const modalBtn = document.querySelector(".modal-btn");
     modal.style.display= "block";
-    
+
     document.addEventListener('click', function(event) {
         if (event.target !== modalBtn && event.target !== modal) {
           modal.style.display = "none";
         }
       });
-    
-    //데이터 버블링 방지  
+
+    //데이터 버블링 방지
     //   변수.addEventListener('click', function(event) {
     //     event.stopPropagation();
     //   });
@@ -37,7 +37,7 @@ function modalOpen(){
 //캐러셀
 const container = document.querySelector(".container");
 const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next"); 
+const nextBtn = document.querySelector(".next");
 
 (function addEvent(){
   prevBtn.addEventListener('click', translateContainer.bind(this, 1));
@@ -64,6 +64,14 @@ function forPractice(){
     // console.log(forArr);
   }
   forP.innerHTML = forArr;
+
+     // for 문을 이용한 구구단 출력
+for(let m = 1; m <= 9; m++) {
+  // console.log('===' + m + '단 ===');
+   for(let n = 1; n<=9; n++){
+    // console.log(m + "X" + n + "=" + m*n)
+   }
+}
 }
 forPractice();
 
@@ -72,10 +80,21 @@ function forEach(){
   const forEachP = document.querySelector('.forEach');
   let EachArr = 1
   EachArr++
+  EachArr++
   // console.log(EachArr);
   forEachP.innerHTML = EachArr;
 }
 forEach();
+
+
+//map
+const a = [1, 2, 3]
+const b = a.map((item) => item)
+console.log(b)
+
+//filter
+
+
 
 
 
