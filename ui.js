@@ -35,51 +35,33 @@ function modalOpen(){
 }
 
 //캐러셀
-// const container = document.querySelector(".container");
-// const prevBtn = document.querySelector(".prev");
-// const nextBtn = document.querySelector(".next");
+const container = document.querySelector(".carousel-container");
+let carouselCurrent = document.querySelector(".carousel-current");
+let carouselIndex = 0;
 
-// (function addEvent(){
-//   prevBtn.addEventListener('click', translateContainer.bind(this, 1));
-//   nextBtn.addEventListener('click', translateContainer.bind(this, -1));
-// })();
+function carouselPre(){
+  if (carouselIndex === 0) return;
+  carouselIndex -= 1;
+  carouselCurrent.textContent = `${carouselIndex+1}`;
+  container.style.transform = "translate(+100px)";
+}
+function carouselNext(){
+  if (carouselIndex === 2) return;
+  carouselIndex += 1;
+  carouselCurrent.textContent = `${carouselIndex+1}`;
+  container.style.transform = "translate(-200px)";
+}
 
-// function translateContainer(direction){
-//   const selectBtn = (direction === 1) ? 'prev' : 'next';
-//   container.style.transitionDuration = '500ms';
-//   container.style.transform = `translateX(${direction * (100 / 5)}%)`;
-//   container.ontransitionend = () => reorganizeEl(selectBtn);
-// }
 
-// function reorganizeEl(selectBtn) {
-//   container.removeAttribute('style');
-//   (selectBtn === 'prev') ? container.insertBefore(container.lastElementChild, container.firstElementChild): container.appendChild(container.firstElementChild);
-// }
 
-// function forPractice(){
-//   const forP = document.querySelector('.for');
-//   let forArr = ["2" ,"3", "4"]
-//   for(i=0; i<1; i++){
-//     forArr.push("5"); // 배열에 5추가
-//     // console.log(forArr);
-//   }
-//   forP.innerHTML = forArr;
 
-//      // for 문을 이용한 구구단 출력
-// for(let m = 1; m <= 9; m++) {
-//   // console.log('===' + m + '단 ===');
-//    for(let n = 1; n<=9; n++){
-//     // console.log(m + "X" + n + "=" + m*n)
-//    }
-// }
-// }
-// forPractice();
 
+//scroll 애니메이션
 let observer = new IntersectionObserver((e)=>{
    e.forEach((box)=>{
-    if(box.isIntersecting){
+    if(box.isIntersecting){ //화면에 보여질때
       box.target.style.opacity = 1;
-    } else{
+    } else{                //아닐때
       box.target.style.opacity = 0;
     }
    })
