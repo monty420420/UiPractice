@@ -43,13 +43,13 @@ function carouselPre(){
   if (carouselIndex === 0) return;
   carouselIndex -= 1;
   carouselCurrent.textContent = `${carouselIndex+1}`;
-  container.style.transform = "translate(+100px)";
+  container.style.transform = `translate(-${100*carouselIndex}px)`;
 }
 function carouselNext(){
   if (carouselIndex === 2) return;
   carouselIndex += 1;
   carouselCurrent.textContent = `${carouselIndex+1}`;
-  container.style.transform = "translate(-200px)";
+  container.style.transform = `translate(-${100*carouselIndex}px)`;
 }
 
 
