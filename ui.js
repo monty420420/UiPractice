@@ -35,66 +35,58 @@ function modalOpen(){
 }
 
 //캐러셀
-const container = document.querySelector(".container");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
+// const container = document.querySelector(".container");
+// const prevBtn = document.querySelector(".prev");
+// const nextBtn = document.querySelector(".next");
 
-(function addEvent(){
-  prevBtn.addEventListener('click', translateContainer.bind(this, 1));
-  nextBtn.addEventListener('click', translateContainer.bind(this, -1));
-})();
+// (function addEvent(){
+//   prevBtn.addEventListener('click', translateContainer.bind(this, 1));
+//   nextBtn.addEventListener('click', translateContainer.bind(this, -1));
+// })();
 
-function translateContainer(direction){
-  const selectBtn = (direction === 1) ? 'prev' : 'next';
-  container.style.transitionDuration = '500ms';
-  container.style.transform = `translateX(${direction * (100 / 5)}%)`;
-  container.ontransitionend = () => reorganizeEl(selectBtn);
-}
+// function translateContainer(direction){
+//   const selectBtn = (direction === 1) ? 'prev' : 'next';
+//   container.style.transitionDuration = '500ms';
+//   container.style.transform = `translateX(${direction * (100 / 5)}%)`;
+//   container.ontransitionend = () => reorganizeEl(selectBtn);
+// }
 
-function reorganizeEl(selectBtn) {
-  container.removeAttribute('style');
-  (selectBtn === 'prev') ? container.insertBefore(container.lastElementChild, container.firstElementChild): container.appendChild(container.firstElementChild);
-}
+// function reorganizeEl(selectBtn) {
+//   container.removeAttribute('style');
+//   (selectBtn === 'prev') ? container.insertBefore(container.lastElementChild, container.firstElementChild): container.appendChild(container.firstElementChild);
+// }
 
-function forPractice(){
-  const forP = document.querySelector('.for');
-  let forArr = ["2" ,"3", "4"]
-  for(i=0; i<1; i++){
-    forArr.push("5"); // 배열에 5추가
-    // console.log(forArr);
-  }
-  forP.innerHTML = forArr;
+// function forPractice(){
+//   const forP = document.querySelector('.for');
+//   let forArr = ["2" ,"3", "4"]
+//   for(i=0; i<1; i++){
+//     forArr.push("5"); // 배열에 5추가
+//     // console.log(forArr);
+//   }
+//   forP.innerHTML = forArr;
 
-     // for 문을 이용한 구구단 출력
-for(let m = 1; m <= 9; m++) {
-  // console.log('===' + m + '단 ===');
-   for(let n = 1; n<=9; n++){
-    // console.log(m + "X" + n + "=" + m*n)
-   }
-}
-}
-forPractice();
+//      // for 문을 이용한 구구단 출력
+// for(let m = 1; m <= 9; m++) {
+//   // console.log('===' + m + '단 ===');
+//    for(let n = 1; n<=9; n++){
+//     // console.log(m + "X" + n + "=" + m*n)
+//    }
+// }
+// }
+// forPractice();
 
+let observer = new IntersectionObserver((e)=>{
+   e.forEach((box)=>{
+    if(box.isIntersecting){
+      box.target.style.opacity = 1;
+    } else{
+      box.target.style.opacity = 0;
+    }
+   })
+});
 
-function forEach(){
-  const forEachP = document.querySelector('.forEach');
-  let EachArr = 1
-  EachArr++
-  EachArr++
-  // console.log(EachArr);
-  forEachP.innerHTML = EachArr;
-}
-forEach();
-
-
-//map
-const a = [1, 2, 3]
-const b = a.map((item) => item)
-console.log(b)
-
-//filter
-
-
-
-
-
+let scrollTag = document.querySelectorAll(".scroll-event");
+observer.observe(scrollTag[0]);
+observer.observe(scrollTag[1]);
+observer.observe(scrollTag[2]);
+observer.observe(scrollTag[3]);
