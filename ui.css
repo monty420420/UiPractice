@@ -114,3 +114,21 @@ body{
   opacity: 0;
   transition: all 2s;
 }
+
+/*container-query*//*아직적용안됨*/
+/* .container-query{
+  margin: 100px 0;
+  width: 400px;
+  height: 200px;
+  border: 1px solid red;
+}
+
+.container-query-text{
+  font-size: 30px;
+}
+
+@container (max-width: 350px){
+  .container-query-text{
+    font-size: 15px;
+  }
+} */
