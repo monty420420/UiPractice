@@ -72,3 +72,11 @@ observer.observe(scrollTag[0]);
 observer.observe(scrollTag[1]);
 observer.observe(scrollTag[2]);
 observer.observe(scrollTag[3]);
+
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve,ms));
+}
+
+delay(3000).then(() => alert('3초후 실행'));
+clearTimeout(delay);
