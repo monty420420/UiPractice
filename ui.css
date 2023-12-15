@@ -101,14 +101,12 @@ body{
 
 .back-ani{
   margin: 40px;
-  width: 150px;
-  height: 150px;
 }
 
 .back-ani div{
-  width: 150px;
-  height: 150px;
-  background: url(https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80) no-repeat center;
+  width: 120px;
+  height: 112px;
+  background: url(./img/heaven.jpg) no-repeat center;
   background-size: 100%;
   transition: background-size .3s ease;
   -moz-transition: background-size .3s ease;
@@ -133,21 +131,3 @@ body{
   opacity: 0;
   transition: all 2s;
 }
-
-/*container-query*//*아직적용안됨*/
-/* .container-query{
-  margin: 100px 0;
-  width: 400px;
-  height: 200px;
-  border: 1px solid red;
-}
-
-.container-query-text{
-  font-size: 30px;
-}
-
-@container (max-width: 350px){
-  .container-query-text{
-    font-size: 15px;
-  }
-} */
